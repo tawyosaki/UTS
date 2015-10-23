@@ -1,0 +1,175 @@
+
+Buku Harian Online (e-diary)
+Diajukan untuk memenuhi tugas UTS Praktikum Rekayasa Perangkat Lunak Lanjut
+https://github.com/namaAkunGit/namaRepositoryProject
+
+
+
+LOGO UIN
+
+
+
+
+
+
+
+Oleh:
+					Nama	: Syita Ulfah
+					Nim	:  1137050209
+					Kelas	: IF- B
+
+
+
+Teknik Informatika
+UIN Sunan Gunung Djati Bandung
+2015
+1.	Latar Belakang
+Akhir-akhir ini tersedia berbagai macam media sosial yang bermunculan seiring dengan perkembangan teknologi dan zaman. Akan tetapi banyak yang menyalah gunakan fitur posting pada media sosial tersebut menjadi lahan curahan hati pribadi, sehingga banyak yang mengetahui privasi pengguna media sosial itu. Karena sudah jarang sekali yang menggunakan buku harian dalam bentuk kertas pada zaman ini.
+	Dari uraian diatas maka penulis berpendapat perlu nya perancangan suatu buku harian yang bisa di akses dimana saja tanpa menulis diatas kertas dan tanpa harus membeli buku diary terlebih dahulu, serta mudah dimengerti dan bisa membantu untuk menangani kendala bagi pengguna media sosial.  Berdasarkan analisa diatas, maka penulis memilih untuk membuat: “Buku Harian Online (e-diary)”
+2.	Rumusan Masalah
+3.	Tujuan
+Adapun tujuan perancangan buku harian online ini bertujuan untuk meminimalisir penggunaan kertas, membuat pengguna tidak kerepotan pada saat ingin menuliskan catatan harian pribadinya.
+4.	Batasan
+Adapun batasan masalah dalam buku harian online  ini adalah sebagai berikut:
+•	Tidak adanya fitur komunikasi dengan sesama pengguna e-diary 
+5.	Deskripsi Perangkat Lunkak
+5.1.	Deskripsi Umum
+Tuliskan overview P/L, dalam bentuk gambar dan narasi yang dapat memberikan gambaran  tentang aplikasi dan konteksnya, yaitu hubungannya dengan dunia luar (gambar yang mirip dengan diagram konteks, tetapi dengan notasi yang lebih mudah dimengerti orang awam).
+5.2.	Pengguna
+Minimal sebuah tabel dengan Kolom : Pengguna, Pekerjaan, Hak Akses. Kolom Hak Akses dihubungkan dengan Fungsi utama yang muncul pada Fungsi Produk.
+
+Kategori Pengguna	Tugas	Hak Akses ke aplikasi
+		
+		
+		
+6.	Requirement
+6.1.	Functional Requirement
+Diawali dengan membuat daftar kebutuhan fungsional P/L, lengkap dengan ID dan penjelasan jika perlu. Bisa dibuat dalam bentuk tabel.
+ID	Kebutuhan	Penjelasan
+		
+		
+		
+		
+		
+6.2.	Non Functional Requirement 
+Uraikan dengan ringkas kebutuhan non fungsional dalam tabel sebagai berikut. Isilah Kolom Kebutuhan dengan kalimat yang jelas dan kelak dapat ditest untuk dipenuhi.ID adalah nomor kebutuhan yang harus ditelusuri pada saat test. Tuliskan N/A bila Not Applicable..
+ID	Parameter	Kebutuhan
+	Availability	
+	Reliability	
+	Ergonomy	
+	Portability	
+	Memory	
+	Response time	
+	Safety	N/A
+	Security	
+		
+	Others 1: Bahasa komunikasi	Misalnya : semua tanya jawab harus dalam bahasa Indonesia
+		Setiap layar harus mengandung logo PT Pos Indonesia
+		
+
+Catatan :
+Availability : ketersediaan aplikasi, misalnya harus terus menerus beroperasi 7 hari perminggu, 24 jam per haritanpa gagal
+Reliability : keandalan, misalnya tidak pernah boleh gagal(atau kegagalan yang ditolerir adalah …%)  sehingga harus dipikirkan fault tolerant architecture. Biasanya hanya perlu untuk Critical Application yang jika gagal akan berakibat fatal.
+ Ergonomy : kenyamanan pakai bagi pengguna
+Portability : kemudahan untuk dibawa dan dioperasikan ke mesin/sistem operasi/platform yang lain
+Memory : jika perhitungan kapasitas memori internal kritis (misalnya untuk SW yang harus dijadikan CHIPS dan ukurannya harus kecil
+Response time : Batasan waktu yang harus dipenuhi. Sangat penting untuk aplikasi Real Time. Contoh: “Aaplikasi harus mampu menampilkan hasil dalam 4 detik”, atau “ATM harus menarik kembali kartu yang tidak diambil dalam waktu 3 menit”
+Safety: yang menyangkut keselamatan manusia, misalnya untuk SW yang dipakai pada sistem kontrol di pabrik
+Security : aspek keamanan yang harus dipenuhi.
+7.	Usecase
+7.1.	Usecase Diagram
+
+ 
+
+7.2.	Definisi Actor
+No	Actor	Deskripsi
+1	User 	Actor dengan role ini mempunyai wewenang untuk melakukan pendaftaran akun serta mengedit info sata dirinya sendiri, dan memposting catatan harian pribadi miliknya.
+
+7.3.	Definisi Usecase
+Bagian ini diisi dengan daftar use case dan deskripsi singkat mengenai use case tersebut. Bisa dibuat dalam bentuk tabel berikut:
+No	Use Case	Deskripsi
+1	Melihat daftar produk	Sistem  menampilkan daftar produk yang boleh dipilih untuk pengguna.
+		
+
+7.4.	Skenario Usecase
+	Nama use case	: Membuat akun baru (daftar)
+Aktor 		: User
+Pre kondisi	: User belum membuat akun pada e-diary
+Post kondisi	: User berhasil membuat akun baru
+Deskripsi	: Merupakan skenario pendaftaran akun
+Aktor	Sistem
+1.	Membuka web e-diary	
+	2.	Menampilkan tampilan utama web
+3.	Mendaftar dengan memasukan nama lengkap, umur, username dan password	
+	4.	Jika umur kurang dari 15 tahun dan username sudah terpakai, maka tidak di izinkan membuat akun.
+Kembali ke tahap 3
+	5.	Akun telah terdaftar
+6.	Menampilkan timeline
+
+	Nama use case	: Mengolah data diri (profile)
+Aktor 		: User
+Pre kondisi	: User belum mengolah data tentang dirinya
+Post kondisi	: User telah mengolah data diri
+Deskripsi	: Merupakan skenario edit profile
+Aktor	Sistem
+	1.	Menampilkan info profile
+2.	Mengedit/merubah info profile, memasukan nama lengkap, tanggal lahir, golongan darah, status, jenis kelamin, about me(tentang saya), foto profil.	
+	3.	Apabila data ada yang belum terisi maka kembali ke tahap 2
+4.	Data profile telah tersimpan
+
+
+
+
+
+
+
+
+	Nama use case	: Membuat catatan baru
+Aktor 		: User
+Pre kondisi	: User belum membuat, mengedit, menghapus catatan pribadi
+Post kondisi	: User berhasil membuat, mengedit, menghapus catatan 
+Deskripsi	: Merupakan skenario pengolahan catatan
+Aktor	Sistem
+1.	Login pada e-diary	
+	2.	Menampilkan timeline
+3.	Menampilkan menu option
+4.	Memilih option buat catatan
+5.	Menulis catatan, selesai menulis	
+	6.	Menyimpan catatan 
+7.	Memilih option lihat catatan	
+	8.	Menampilkan catatan yang telah dibuat sebelumnya
+9.	Memilih option edit catatan
+10.	Mengedit catatan, selesai mengedit	
+	11.	Menyimpan catatan
+	12.	Menampilkan catatan yang telah dibuat sebelumnya
+13.	Memilih option hapus catatan	
+	14.	Konfirmasi penghapusan catatan
+15.	Apabila catatan tidak jadi dihapus maka kembali ke tahap 8
+16.	Catatan terhapus
+
+
+
+	Nama use case	: Logout
+Aktor 		: User
+Pre kondisi	: User masih dalam keadaan login
+Post kondisi	: User dalam keadaan logout
+Deskripsi	: Merupakan skenario keluar dari akun e-diary
+Aktor	Sistem
+1.	User login terlebih dahulu	
+	2.	Menampilkan timeline
+3.	Menampilkan menu option
+4.	Memilih option keluar(logout)	
+	5.	Kembali ke halaman utama web
+
+
+8.	Class Diagram
+ 
+Gambar Diagram Kelas
+
+Bagian ini diisi dengan daftar seluruh kelas kelas analisis dalam tabel berikut:
+No	Nama Kelas	Jenis
+		
+		
+		
+
+
